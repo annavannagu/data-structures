@@ -6,11 +6,11 @@ namespace data_structures
     {
         static void Main(string[] args)
         {
-            //ArraysStrings arr = new();
+            ArraysStrings arr = new();
 
-            //bool res = arr.CheckPermutation("g3215", "g3252");
+            bool res = arr.CheckPermutation("g3215", "g3254");
 
-            //Console.WriteLine(res);
+            Console.WriteLine(res);
         }
     }
 }

@@ -31,6 +31,7 @@ namespace data_structures
 
         public bool CheckPermutation(string str1, string str2)
         {
+            //faster method O(N) time
             if (str1 != null && str2 != null && str1 != "" && str2 != "")
             {
                 if (str1.Length != str2.Length)
@@ -45,7 +46,7 @@ namespace data_structures
                     val = (int)str2[i];
                     chars2[val] = chars2[val] + 1;
                 }
-              
+
 
                 for (int i = 0; i < 128; i++)
                 {
@@ -53,10 +54,30 @@ namespace data_structures
                     {
                         return false;
                     }
-                        
+
                 }
             }
             return true;
+
+            //slower method O(NlogN) time
+
+            //if (str1 != null && str2 != null && str1 != "" && str2 != "")
+            //{
+            //    if (str1.Length != str2.Length)
+            //        return false;
+
+            //    return Sort(str1) == Sort(str2);
+            //}
+            //return true;
         }
+
+        private string Sort (string str)
+        {
+            char[] arr = str.ToCharArray();            
+            Array.Sort(arr);
+            return new string(arr);
+        }
+
+       
     }
 }

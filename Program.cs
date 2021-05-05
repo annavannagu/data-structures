@@ -8,7 +8,7 @@ namespace data_structures
         {
             ArraysStrings arr = new();
 
-            bool res = arr.CheckPermutation("g3215", "g3254");
+            bool res = arr.IsOneEditAway("g1235", "g12315");
 
             Console.WriteLine(res);
         }
